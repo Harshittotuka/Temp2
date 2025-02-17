@@ -13,7 +13,7 @@
 09. Slider owlCarousel (Homepage Slider)
 10. Testimonials owlCarousel
 11. Blog owlCarousel
-12. Practice Areas owlCarousel
+12. Services owlCarousel
 13. Team owlCarousel
 14. Case Study owlCarousel
 15. Clients owlCarousel
