@@ -260,9 +260,17 @@ $(function () {
         }
     });
     
-    // Team owlCarousel 
-    $('.team .owl-carousel').owlCarousel({
-        loop: true,
+   // Team owlCarousel 
+   $(document).ready(function () {
+    var carousel = $('.team .owl-carousel');
+    var itemsCount = $('.team .owl-carousel .item').length; // Count total profiles
+    var screenWidth = $(window).width(); // Get screen width
+    var itemsToShow = screenWidth < 600 ? 1 : screenWidth < 1000 ? 2 : 4; // Determine visible items
+
+    // Initialize Owl Carousel with dynamic loop condition
+    carousel.owlCarousel({
+        loop: itemsCount > itemsToShow, // Enable loop only if items exceed visible count
+        rewind: false, // Disable rewind if loop is true
         margin: 30,
         dots: false,
         mouseDrag: true,
@@ -271,18 +279,13 @@ $(function () {
         navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
         responsiveClass: true,
         responsive: {
-            0: {
-                items: 1,
-                dots: true
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
+            0: { items: 1, dots: true },
+            600: { items: 2 },
+            1000: { items: 4 }
         }
     });
+});
+
     
     // Case Study owlCarousel
     $('.case-study .owl-carousel').owlCarousel({
