@@ -292,8 +292,8 @@ $(function () {
         loop: true,
         margin: 20,
         mouseDrag: true,
-        autoplay: false,
-        autoplayTimeout: 5000,
+        autoplay: true,
+        autoplayTimeout: 1000, // Changed to 1000ms (1 second)
         smartSpeed: 1000,
         dots: true,
         nav: false,
@@ -312,6 +312,7 @@ $(function () {
             }
         }
     });
+    
     
     // Clients owlCarousel 
     $('.clients .owl-carousel').owlCarousel({
