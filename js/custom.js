@@ -293,7 +293,7 @@ $(function () {
         margin: 20,
         mouseDrag: true,
         autoplay: true,
-        autoplayTimeout: 1000, // Changed to 1000ms (1 second)
+        autoplayTimeout: 3000, // Changed to 1000ms (1 second)
         smartSpeed: 1000,
         dots: true,
         nav: false,
